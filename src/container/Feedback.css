@@ -216,14 +216,10 @@ label {
   flex: 0 0 100%;
 }
 .effortTab {
-  font-size: 12px;
-  box-shadow: rgb(204, 204, 204) 0px 0px 5px 2px;
-  font-weight: 700;
-  min-width: 100%;
+  cursor: pointer;
+  border: solid 1px #ccc;
   text-align: center;
-  margin: 0px;
-  padding: 5px 15px;
-  border-radius: 5px;
+  flex: 1;
 }
 .activeExperience,
 .activeEffort,
@@ -232,14 +228,10 @@ label {
   color: rgb(255, 255, 255);
 }
 .recommendTab {
-  font-size: 12px;
-  box-shadow: rgb(204, 204, 204) 0px 0px 5px 2px;
-  font-weight: 700;
-  min-width: 100%;
+  cursor: pointer;
+  border: solid 1px #ccc;
   text-align: center;
-  margin: 0px;
-  padding: 5px 15px;
-  border-radius: 5px;
+  flex: 1;
 }
 .form-group {
   margin-bottom: 1rem;

@@ -94,7 +94,7 @@ const Feedback = () => {
             <label className="maroonFont">Very low effort</label>
             <label className="maroonFont">Very high effort</label>
           </div>
-          <div className="row justify-content-between">
+          {/* <div className="row justify-content-between">
             {effortArray.map((item, i) => {
               return (
                 <div key={i} className="col">
@@ -108,7 +108,23 @@ const Feedback = () => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
+          <table style={{ minWidth: "100%" }}>
+            <tr>
+              {effortArray.map((item, i) => {
+                return (
+                  <td
+                    key={i}
+                    style={{ border: "solid 1px #ccc", textAlign: "center" }}
+                    onClick={() => handleEffort(item)}
+                    className={`effortTab ${effort === item && "activeEffort"}`}
+                  >
+                    {item}
+                  </td>
+                );
+              })}
+            </tr>
+          </table>
           <hr />
           <p>
             How likely are you to recommend Snaxa.com to friend, family or
@@ -118,7 +134,7 @@ const Feedback = () => {
             <label className="maroonFont">Not all likely</label>
             <label className="maroonFont">Extremly likely</label>
           </div>
-          <div className="row justify-content-between">
+          {/* <div className="row justify-content-between">
             {recommendArray.map((item, i) => {
               return (
                 <div key={i} className="col">
@@ -134,7 +150,24 @@ const Feedback = () => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
+          <table style={{ minWidth: "100%" }}>
+            <tr style={{ display: "flex", flexWrap: "wrap" }}>
+              {recommendArray.map((item, i) => {
+                return (
+                  <td
+                    key={i}
+                    onClick={() => handleRecommend(item)}
+                    className={`recommendTab ${
+                      recommend === item && "activeRecommed"
+                    }`}
+                  >
+                    {item}
+                  </td>
+                );
+              })}
+            </tr>
+          </table>
           <hr />
           {/* <p>Please provide any other feedback on your Snaxa.com experience.</p> */}
           <div class="form-group">
